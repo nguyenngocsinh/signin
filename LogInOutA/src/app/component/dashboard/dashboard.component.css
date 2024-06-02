@@ -1,0 +1,128 @@
+.outerdashboard {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to left, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+}
+
+.header {
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end; /* Thay đổi thành flex-end để căn phải */
+  align-items: center;
+}
+
+.header .userProfile {
+  color: rgb(4, 4, 4);
+  text-decoration: none;
+  margin-right: 10px;
+  font-family: 'Times New Roman', Times, serif; 
+  font-size: 18px;  
+  text-transform: capitalize; 
+}
+
+.header .userLogout button {
+  box-shadow: 5px 5px 5px rgb(131, 127, 184);
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background-color: #6e6ef6;
+  color: #ffffff;
+  margin-top: 5px 5px; /* Đây có vẻ không đúng, hãy chỉ sử dụng một giá trị margin-top */
+  padding: 10px 20px;
+}
+
+.header .userLogout button:hover {
+  background-color: #4d4dff;
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.listbox {
+  background-color: #0e3ff0;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px rgb(131, 127, 184);
+}
+
+.list {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  display: inline-block;
+  height: 95%;
+  width: 95%;
+  border-radius: 10px;
+  justify-content: start;
+  
+}
+.content-list{
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
+.table{
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #0e3ff0;
+  height: 200px;
+  width: 30%;
+  border-radius: 10px;
+  margin-right: 10px;
+  box-shadow: 5px 5px 5px rgb(131, 127, 184);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.list-sidebar {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  width: 95%;
+  border-radius: 10px;
+  justify-content: start;
+  margin: 10px;
+  
+}
+
+.content-list-sidebar{
+  display: block; 
+  margin: 5px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Signup</h3>
+                    </div>
+                    <div class="panel-body pt-3">
+                        <form [formGroup]="signUpForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="f['username'].dirty && f['username'].invalid">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="username" type="text" placeholder= "Username">
+                                </div>
+                            </div>
+                            <small *ngIf="f['username'].dirty && signUpForm.hasError('required', 'username')" class="text-danger">*Username is required</small>
+                            <small *ngIf="f['username'].getError('minlength')"  class="text-danger">*Username must be at least 8 characters long</small>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="f['password'].dirty && f['password'].invalid">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input type="password" [type]="hideshowPass ? 'password' : 'text'" formControlName="password" placeholder= "Password">
+                                    <span class="fa" [ngClass]="hideshowPass ? 'fa-eye' : 'fa-eye-slash'" (click)="ShowPass()">
+                                        {{ hideshowPass ? '' : '' }}
+                                    </span>
+                                </div>
+                                <small *ngIf="f['password'].getError('minlength')!=null " class="text-danger">*Password must be at least 8 characters long</small>
+                                <small *ngIf="(f['password'].getError('minlength')!=null)==false && (f['password'].getError('pattern')!=null)==true " class="text-danger">*Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character </small>
+                                <small *ngIf="f['password'].dirty && signUpForm.hasError('required', 'password')" class="text-danger">*Password is required</small>
+                            </div>
+                           
+                            
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="f['confirmpassword'].dirty && f['confirmpassword'].invalid">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input type="password" [type]="hideshowConfirmPass ? 'password' : 'text'" formControlName="confirmpassword" placeholder= "ConfirmPassword">
+                                    <span class="fa" [ngClass]="hideshowConfirmPass ? 'fa-eye' : 'fa-eye-slash'" (click)="ShowConfirmPass()">
+                                        {{ hideshowConfirmPass ? '' : '' }}
+                                    </span>
+                                </div>
+                                <small *ngIf="f['confirmpassword'].dirty && f['confirmpassword'].errors?.['required']" class="text-danger">*ConfirmPassword is required</small>
+                                <small *ngIf="f['confirmpassword'].getError('matchpassword')!=null " class="text-danger">*Password mismatch</small>
+                                
+                            </div>
+                            
+
+                            <button (click)="onSignup()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Sign up</button>
+                            <div class="text-center pt-4 textmuted">Already havce account ?
+                                <a id="forget" routerLink="/login">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="mss-3 my-2 py-2 border">
+                        <div class="text-center py-3">
+
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

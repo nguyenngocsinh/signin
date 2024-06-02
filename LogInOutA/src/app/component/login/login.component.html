@@ -1,0 +1,47 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Login</h3>
+                    </div>
+                    <div class="panel-body pt-3">
+                        <form [formGroup]="loginForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="loginForm.controls['username'].dirty && loginForm.hasError('required', 'username')">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input formControlName="username" type="text" placeholder="Username">
+                                </div>
+                            </div>
+                            <small *ngIf="loginForm.controls['username'].dirty && loginForm.hasError('required', 'username')" class="text-danger">*Username is required</small>
+
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input type="password" [type]="hideshowPass ? 'password' : 'text'" formControlName="password" placeholder= "Password">
+                                    <span class="fa" [ngClass]="hideshowPass ? 'fa-eye' : 'fa-eye-slash'" (click)="ShowPass()">
+                                        {{ hideshowPass ? '' : '' }}
+                                    </span>
+                                
+                                </div>
+                            </div>
+                            <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required', 'password')" class="text-danger">*Password is required</small>
+                            
+                            <button (click)="onLogin()" type="submit" class="btn btn-primary btn-block mt-4 w-100">Log in</button>
+                            <div class="text-center pt-4 textmuted">Don't have account ?
+                                <a id="forget" routerLink="/signup">SignUp</a>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- <div class="mss-3 my-2 py-2 border">
+                        <div class="text-center py-3">
+
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

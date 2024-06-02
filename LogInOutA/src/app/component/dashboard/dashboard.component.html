@@ -1,0 +1,46 @@
+<div class="outerdashboard">
+  <div class="dashboard">
+    <div class="header">
+        <div class="userProfile">
+          <span>{{username}}</span>
+        </div>
+      <div class="userLogout">
+        
+        <button (click)="onLogout()" >Logout</button>
+      </div>
+      
+    </div>
+  
+    <div class="content">
+      
+      <div class="listbox">
+        <div class="list">
+          <div class="content-list">
+            
+              <table class="table"> 
+                <thead> 
+                  <tr>
+                    <th>Tên</th>
+                    <th>Trạng thái</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let user of users">
+                    <td>{{user.username}}</td>
+                    <td>{{user.isactive}}</td>
+                    <td>
+                      <button>Delete</button>
+                      <button>Detail</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

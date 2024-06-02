@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.outer {
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6 90%) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 30em;
+    max-width: 1200px;
+    margin: 0 ;
+}
+
+
+.row {
+
+    background-color: white;
+    border-radius: 10px;
+}
+
+.panel {
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.panel-heading {
+    text-align: center;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.form-inline {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    text-align: end;
+
+}
+
+#forget {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+
+#forget.font-weight-bold {
+
+    float: left;
+    font-size: 10px;
+}
+
+
+
+.btn.btn-primary {
+    width: 100%;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    background-color: #6e6ef6;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.form {
+    background-color: white;
+}
+
+
+
+.text-muted a {
+    text-decoration: none;
+    color: inherit;
+    margin: center;
+    display: block;
+ 
+}
+
+.text-center {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 3px;
+}
+
+.input-field.error {
+    border: 1px solid red;
+    color: red;
+
+}
+
+
+input[type='text'],
+input[type='password'] {
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+  
+}
+
+.fa-eye-slash.btn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+a.hover {
+    text-decoration: none;
+}
+
+.text-danger{
+    color: red;
+}
+
+.btn.btn-primary:hover {
+    background-color: #4d4dff; 
+    color: #fff; 
+    transition: background-color 0.3s ease, color 0.3s ease; }
